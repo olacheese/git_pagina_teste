@@ -1,4 +1,4 @@
-document.getElementById('meuBotao').addEventListener('click', () => {
-  const mensagem = document.getElementById('mensagem');
-  mensagem.textContent = '🎉 Funcionaaaaaaaaaaa! O JavaScript está a correr no GitHub Pages.';
+// Executa assim que a página carregar
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("JavaScript carregado com sucesso!");
 });

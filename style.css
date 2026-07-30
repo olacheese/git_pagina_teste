@@ -1,32 +1,63 @@
+/* Reset básico de margens e fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fundo da página centralizado */
 body {
-  font-family: system-ui, -apple-system, sans-serif;
-  background-color: #f4f4f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+    background-color: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.container {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
+/* Caixa central (Card) */
+.card {
+    background-color: #1e293b;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
 }
 
-button {
-  background-color: #0969da;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s;
+h1 {
+    margin-bottom: 1rem;
+    color: #38bdf8;
 }
 
-button:hover {
-  background-color: #044289;
+p {
+    margin-bottom: 2rem;
+    color: #94a3b8;
+}
+
+/* Estilo do Botão */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #0284c7;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #0369a1;
+}
+
+/* Variação de cor para o botão de voltar */
+.btn-secondary {
+    background-color: #475569;
+}
+
+.btn-secondary:hover {
+    background-color: #334155;
 }
