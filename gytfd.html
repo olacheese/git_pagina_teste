@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste React</title>
+  <!-- 1. Carregar o React e o Babel da internet -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <!-- Onde o React vai desenhar o botão -->
+  <div id="root"></div>
+
+  <!-- 2. Repara no type="text/babel" (permite escrever JSX) -->
+  <script type="text/babel">
+    function MeuBotao() {
+      // Estado de carregamento (true/false)
+      const [carregando, setCarregando] = React.useState(false);
+
+      const simularEnvio = () => {
+        setCarregando(true);
+        // Simula uma espera de 2 segundos
+        setTimeout(() => {
+          setCarregando(false);
+        }, 2000);
+      };
+
+      return (
+        <button 
+          onClick={simularEnvio} 
+          disabled={carregando}
+          style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer' }}
+        >
+          {carregando ? 'A processar...' : 'Enviar Formulário'}
+        </button>
+      );
+    }
+
+    // Renderizar o componente dentro da div #root
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<MeuBotao />);
+  </script>
+</body>
+</html>
